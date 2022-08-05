@@ -38,6 +38,8 @@ ENV DOCKER_VERNEMQ_KUBERNETES_LABEL_SELECTOR="app=vernemq" \
 
 WORKDIR /vernemq
 
+COPY --chown=10000:10000 files/mysql.lua /vernemq/apps/vmq_diversity/priv/auth/mysql.lua
+
 COPY --chown=10000:10000 bin/vernemq.sh /usr/sbin/start_vernemq
 COPY --chown=10000:10000 --from=build /vernemq /vernemq
 
