@@ -32,5 +32,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ github.repository }}:latest
-            ${{ github.repository }}:${{ steps.get_version.outputs.version }}
+            redoonetworks/vernemq-docker:latest
+            redoonetworks/vernemq-docker:${{ steps.get_version.outputs.version }}
